@@ -12,5 +12,10 @@ adView = TiAdmaker.createView
   siteId: "<SITE_ID>"
   zoneId: "<ZONE_ID>"
 
+adView.addEventListener 'success', ->
+  Ti.API.debug "request success"
+adView.addEventListener 'fail', ->
+  Ti.API.debug "request failed"
+
 win.add adView
 win.open()

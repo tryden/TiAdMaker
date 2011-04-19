@@ -16,7 +16,6 @@
 
 - (void)dealloc
 {
-  NSLog(@"dealloc");
   RELEASE_TO_NIL(adMaker);
   [super dealloc];
 }
@@ -66,7 +65,6 @@
 
 - (UIViewController *)currentViewControllerForAd
 {
-  NSLog(@"currentController %@", controller);
   return controller;
 }
 
@@ -82,11 +80,13 @@
   NSLog(@"[DEBUG] adMaker request Ad success");
   [adMaker setFrame:CGRectMake(0, 0, 320, 50)];
   [super addSubview:adMaker.view];
+  [self.proxy fireEvent:@"success"];
 }
 
 - (void)requestAdFail
 {
   NSLog(@"[DEBUG] adMaker request Ad fail");
+  [self.proxy fireEvent:@"fail"];
 }
 
 @end
