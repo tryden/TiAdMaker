@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.1
+description: My module
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2010 by Your Company
+
+
+# these should not be edited
+name: tiadmaker
+moduleid: co.saiten.ti.admaker
+guid: c650f77c-ce79-4fd9-8fb1-9c9ce5564a3c
+platform: iphone
+minsdk: 1.6.1
